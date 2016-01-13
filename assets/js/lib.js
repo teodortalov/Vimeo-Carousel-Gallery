@@ -13,6 +13,7 @@ Vimeo Carousel Gallery
 var Vimeo = {
     init: function (config) {
         this.container = config.container;
+        this.data = config.data
         this.attach();
         this.fetch();
     },
@@ -24,7 +25,7 @@ var Vimeo = {
     },
     attach: function () {
         var self = this,
-            main = self.getId(data.main),
+            main = self.getId(self.data.main),
             structure = [
             '<div class="featured">',
                 '<iframe src="http://player.vimeo.com/video/'+main+'" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen />',
@@ -48,7 +49,7 @@ var Vimeo = {
     },
     fetch: function () {
         var self     = this,
-            videos   = data.videos,
+            videos   = self.data.videos,
             carousel = $('.carousel-container'),
             i, l;
 
