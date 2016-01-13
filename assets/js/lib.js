@@ -29,16 +29,8 @@ var Vimeo = {
             structure = [
             '<div class="featured">',
                 '<iframe src="http://player.vimeo.com/video/'+main+'" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen />',
+
             '</div>',
-            '<div class="carousel-container cf">',
-                '<span class="shadow shadow-left" />',
-                '<span class="prev controll" />',
-                '<div class="carousel-inner">',
-                    '<ul class="slider cf" />',
-                '</div>',
-                '<span class="next controll" />',
-                '<span class="shadow shadow-right" />',
-            '</div>'
         ];
 
         if (main) {
